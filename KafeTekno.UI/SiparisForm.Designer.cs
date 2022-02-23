@@ -77,12 +77,11 @@
             // 
             // btnSiparisIptal
             // 
-            this.btnSiparisIptal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSiparisIptal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiparisIptal.BackColor = System.Drawing.Color.DarkRed;
             this.btnSiparisIptal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiparisIptal.ForeColor = System.Drawing.Color.White;
-            this.btnSiparisIptal.Location = new System.Drawing.Point(287, 274);
+            this.btnSiparisIptal.Location = new System.Drawing.Point(284, 258);
             this.btnSiparisIptal.Name = "btnSiparisIptal";
             this.btnSiparisIptal.Size = new System.Drawing.Size(90, 50);
             this.btnSiparisIptal.TabIndex = 1;
@@ -97,7 +96,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 62);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(249, 335);
+            this.dataGridView1.Size = new System.Drawing.Size(249, 302);
             this.dataGridView1.TabIndex = 2;
             // 
             // nudAdet
@@ -156,7 +155,7 @@
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(286, 221);
+            this.label5.Location = new System.Drawing.Point(284, 212);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 43);
             this.label5.TabIndex = 6;
@@ -165,12 +164,11 @@
             // 
             // btnAnaSayfayaDon
             // 
-            this.btnAnaSayfayaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAnaSayfayaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAnaSayfayaDon.BackColor = System.Drawing.Color.Navy;
             this.btnAnaSayfayaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnaSayfayaDon.ForeColor = System.Drawing.Color.White;
-            this.btnAnaSayfayaDon.Location = new System.Drawing.Point(287, 330);
+            this.btnAnaSayfayaDon.Location = new System.Drawing.Point(284, 314);
             this.btnAnaSayfayaDon.Name = "btnAnaSayfayaDon";
             this.btnAnaSayfayaDon.Size = new System.Drawing.Size(186, 50);
             this.btnAnaSayfayaDon.TabIndex = 1;
@@ -179,12 +177,11 @@
             // 
             // btnOdemeAl
             // 
-            this.btnOdemeAl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOdemeAl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOdemeAl.BackColor = System.Drawing.Color.ForestGreen;
             this.btnOdemeAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdemeAl.ForeColor = System.Drawing.Color.White;
-            this.btnOdemeAl.Location = new System.Drawing.Point(383, 274);
+            this.btnOdemeAl.Location = new System.Drawing.Point(380, 258);
             this.btnOdemeAl.Name = "btnOdemeAl";
             this.btnOdemeAl.Size = new System.Drawing.Size(90, 50);
             this.btnOdemeAl.TabIndex = 1;
@@ -206,9 +203,9 @@
             this.lblOdemeTutari.BackColor = System.Drawing.Color.Black;
             this.lblOdemeTutari.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOdemeTutari.ForeColor = System.Drawing.Color.White;
-            this.lblOdemeTutari.Location = new System.Drawing.Point(342, 231);
+            this.lblOdemeTutari.Location = new System.Drawing.Point(340, 222);
             this.lblOdemeTutari.Name = "lblOdemeTutari";
-            this.lblOdemeTutari.Size = new System.Drawing.Size(130, 23);
+            this.lblOdemeTutari.Size = new System.Drawing.Size(128, 23);
             this.lblOdemeTutari.TabIndex = 6;
             this.lblOdemeTutari.Text = "₺ 0.00";
             this.lblOdemeTutari.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -217,7 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 412);
+            this.ClientSize = new System.Drawing.Size(489, 383);
             this.Controls.Add(this.lblOdemeTutari);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblMasaNo);
@@ -233,6 +230,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MinimumSize = new System.Drawing.Size(505, 422);
             this.Name = "SiparisForm";
             this.Text = "Sipariş";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
