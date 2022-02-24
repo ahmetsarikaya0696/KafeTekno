@@ -57,20 +57,29 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvSiparisDetaylari);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Size = new System.Drawing.Size(561, 365);
+            this.splitContainer1.Size = new System.Drawing.Size(536, 365);
             this.splitContainer1.SplitterDistance = 182;
             this.splitContainer1.TabIndex = 0;
             // 
             // dgvSiparisler
             // 
+            this.dgvSiparisler.AllowUserToAddRows = false;
+            this.dgvSiparisler.AllowUserToDeleteRows = false;
             this.dgvSiparisler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSiparisler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSiparisler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSiparisler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSiparisler.Location = new System.Drawing.Point(8, 25);
             this.dgvSiparisler.Name = "dgvSiparisler";
-            this.dgvSiparisler.Size = new System.Drawing.Size(541, 154);
+            this.dgvSiparisler.ReadOnly = true;
+            this.dgvSiparisler.RowHeadersVisible = false;
+            this.dgvSiparisler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSiparisler.Size = new System.Drawing.Size(516, 154);
             this.dgvSiparisler.TabIndex = 1;
+            this.dgvSiparisler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSiparisler_CellContentClick);
+            this.dgvSiparisler.SelectionChanged += new System.EventHandler(this.dgvSiparisler_SelectionChanged);
             // 
             // label1
             // 
@@ -84,13 +93,20 @@
             // 
             // dgvSiparisDetaylari
             // 
+            this.dgvSiparisDetaylari.AllowUserToAddRows = false;
+            this.dgvSiparisDetaylari.AllowUserToDeleteRows = false;
             this.dgvSiparisDetaylari.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSiparisDetaylari.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSiparisDetaylari.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSiparisDetaylari.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSiparisDetaylari.Location = new System.Drawing.Point(8, 16);
             this.dgvSiparisDetaylari.Name = "dgvSiparisDetaylari";
-            this.dgvSiparisDetaylari.Size = new System.Drawing.Size(541, 156);
+            this.dgvSiparisDetaylari.ReadOnly = true;
+            this.dgvSiparisDetaylari.RowHeadersVisible = false;
+            this.dgvSiparisDetaylari.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSiparisDetaylari.Size = new System.Drawing.Size(516, 156);
             this.dgvSiparisDetaylari.TabIndex = 1;
             // 
             // label2
@@ -107,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 365);
+            this.ClientSize = new System.Drawing.Size(536, 365);
             this.Controls.Add(this.splitContainer1);
             this.Name = "GecmisSiparislerForm";
             this.Text = "Geçmiş Siparişler";

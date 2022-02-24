@@ -15,7 +15,7 @@ namespace KafeTekno.DATA
 * TutarTL: string-readonly
 - Tutar(): decimal*/
 
-    internal class SiparisDetay
+    public class SiparisDetay
     {
         public string UrunAd { get; set; }
         public decimal BirimFiyat { get; set; }

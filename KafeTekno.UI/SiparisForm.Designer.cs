@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSiparisIptal = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSiparisDetaylar = new System.Windows.Forms.DataGridView();
             this.nudAdet = new System.Windows.Forms.NumericUpDown();
             this.cboUrunSec = new System.Windows.Forms.ComboBox();
             this.cboMasaNoSec = new System.Windows.Forms.ComboBox();
@@ -43,7 +43,7 @@
             this.btnOdemeAl = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
             this.lblOdemeTutari = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSiparisDetaylar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAdet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +69,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(281, 11);
+            this.label3.Location = new System.Drawing.Point(471, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 0;
@@ -81,30 +81,49 @@
             this.btnSiparisIptal.BackColor = System.Drawing.Color.DarkRed;
             this.btnSiparisIptal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiparisIptal.ForeColor = System.Drawing.Color.White;
-            this.btnSiparisIptal.Location = new System.Drawing.Point(284, 258);
+            this.btnSiparisIptal.Location = new System.Drawing.Point(477, 258);
             this.btnSiparisIptal.Name = "btnSiparisIptal";
             this.btnSiparisIptal.Size = new System.Drawing.Size(90, 50);
             this.btnSiparisIptal.TabIndex = 1;
             this.btnSiparisIptal.Text = "SİPARİŞ İPTAL";
             this.btnSiparisIptal.UseVisualStyleBackColor = false;
+            this.btnSiparisIptal.Click += new System.EventHandler(this.btnSiparisIptal_Click);
             // 
-            // dataGridView1
+            // dgvSiparisDetaylar
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvSiparisDetaylar.AllowUserToAddRows = false;
+            this.dgvSiparisDetaylar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 62);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(249, 302);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvSiparisDetaylar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSiparisDetaylar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvSiparisDetaylar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSiparisDetaylar.Location = new System.Drawing.Point(12, 62);
+            this.dgvSiparisDetaylar.MultiSelect = false;
+            this.dgvSiparisDetaylar.Name = "dgvSiparisDetaylar";
+            this.dgvSiparisDetaylar.ReadOnly = true;
+            this.dgvSiparisDetaylar.RowHeadersVisible = false;
+            this.dgvSiparisDetaylar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSiparisDetaylar.Size = new System.Drawing.Size(439, 302);
+            this.dgvSiparisDetaylar.TabIndex = 2;
+            this.dgvSiparisDetaylar.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvSiparisDetaylar_UserDeletingRow);
             // 
             // nudAdet
             // 
             this.nudAdet.Location = new System.Drawing.Point(139, 30);
+            this.nudAdet.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudAdet.Name = "nudAdet";
             this.nudAdet.Size = new System.Drawing.Size(42, 20);
             this.nudAdet.TabIndex = 3;
+            this.nudAdet.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // cboUrunSec
             // 
@@ -120,7 +139,7 @@
             this.cboMasaNoSec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboMasaNoSec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMasaNoSec.FormattingEnabled = true;
-            this.cboMasaNoSec.Location = new System.Drawing.Point(281, 29);
+            this.cboMasaNoSec.Location = new System.Drawing.Point(471, 29);
             this.cboMasaNoSec.Name = "cboMasaNoSec";
             this.cboMasaNoSec.Size = new System.Drawing.Size(105, 21);
             this.cboMasaNoSec.TabIndex = 4;
@@ -128,7 +147,7 @@
             // btnTasi
             // 
             this.btnTasi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTasi.Location = new System.Drawing.Point(395, 27);
+            this.btnTasi.Location = new System.Drawing.Point(585, 27);
             this.btnTasi.Name = "btnTasi";
             this.btnTasi.Size = new System.Drawing.Size(75, 23);
             this.btnTasi.TabIndex = 1;
@@ -139,10 +158,10 @@
             // 
             this.lblMasaNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMasaNo.BackColor = System.Drawing.Color.DarkOrange;
-            this.lblMasaNo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMasaNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMasaNo.Font = new System.Drawing.Font("Segoe UI Historic", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMasaNo.ForeColor = System.Drawing.Color.White;
-            this.lblMasaNo.Location = new System.Drawing.Point(281, 62);
+            this.lblMasaNo.Location = new System.Drawing.Point(474, 62);
             this.lblMasaNo.Name = "lblMasaNo";
             this.lblMasaNo.Size = new System.Drawing.Size(189, 150);
             this.lblMasaNo.TabIndex = 5;
@@ -155,7 +174,7 @@
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(284, 212);
+            this.label5.Location = new System.Drawing.Point(477, 212);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 43);
             this.label5.TabIndex = 6;
@@ -168,12 +187,13 @@
             this.btnAnaSayfayaDon.BackColor = System.Drawing.Color.Navy;
             this.btnAnaSayfayaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnaSayfayaDon.ForeColor = System.Drawing.Color.White;
-            this.btnAnaSayfayaDon.Location = new System.Drawing.Point(284, 314);
+            this.btnAnaSayfayaDon.Location = new System.Drawing.Point(477, 314);
             this.btnAnaSayfayaDon.Name = "btnAnaSayfayaDon";
             this.btnAnaSayfayaDon.Size = new System.Drawing.Size(186, 50);
             this.btnAnaSayfayaDon.TabIndex = 1;
             this.btnAnaSayfayaDon.Text = "ANASAYFAYA DÖN";
             this.btnAnaSayfayaDon.UseVisualStyleBackColor = false;
+            this.btnAnaSayfayaDon.Click += new System.EventHandler(this.btnAnaSayfayaDon_Click);
             // 
             // btnOdemeAl
             // 
@@ -181,12 +201,13 @@
             this.btnOdemeAl.BackColor = System.Drawing.Color.ForestGreen;
             this.btnOdemeAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdemeAl.ForeColor = System.Drawing.Color.White;
-            this.btnOdemeAl.Location = new System.Drawing.Point(380, 258);
+            this.btnOdemeAl.Location = new System.Drawing.Point(573, 258);
             this.btnOdemeAl.Name = "btnOdemeAl";
             this.btnOdemeAl.Size = new System.Drawing.Size(90, 50);
             this.btnOdemeAl.TabIndex = 1;
             this.btnOdemeAl.Text = "ÖDEME AL";
             this.btnOdemeAl.UseVisualStyleBackColor = false;
+            this.btnOdemeAl.Click += new System.EventHandler(this.btnOdemeAl_Click);
             // 
             // btnEkle
             // 
@@ -196,6 +217,7 @@
             this.btnEkle.TabIndex = 1;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // lblOdemeTutari
             // 
@@ -203,7 +225,7 @@
             this.lblOdemeTutari.BackColor = System.Drawing.Color.Black;
             this.lblOdemeTutari.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOdemeTutari.ForeColor = System.Drawing.Color.White;
-            this.lblOdemeTutari.Location = new System.Drawing.Point(340, 222);
+            this.lblOdemeTutari.Location = new System.Drawing.Point(533, 222);
             this.lblOdemeTutari.Name = "lblOdemeTutari";
             this.lblOdemeTutari.Size = new System.Drawing.Size(128, 23);
             this.lblOdemeTutari.TabIndex = 6;
@@ -214,14 +236,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 383);
+            this.ClientSize = new System.Drawing.Size(679, 383);
             this.Controls.Add(this.lblOdemeTutari);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblMasaNo);
             this.Controls.Add(this.cboMasaNoSec);
             this.Controls.Add(this.cboUrunSec);
             this.Controls.Add(this.nudAdet);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvSiparisDetaylar);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.btnTasi);
             this.Controls.Add(this.btnOdemeAl);
@@ -233,7 +255,7 @@
             this.MinimumSize = new System.Drawing.Size(505, 422);
             this.Name = "SiparisForm";
             this.Text = "Sipariş";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSiparisDetaylar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAdet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -246,7 +268,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSiparisIptal;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSiparisDetaylar;
         private System.Windows.Forms.NumericUpDown nudAdet;
         private System.Windows.Forms.ComboBox cboUrunSec;
         private System.Windows.Forms.ComboBox cboMasaNoSec;

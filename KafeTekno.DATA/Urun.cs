@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KafeTekno.DATA
 {
-    internal class Urun
+    public class Urun
     {
         public string UrunAd { get; set; }
         public decimal BirimFiyat { get; set; }

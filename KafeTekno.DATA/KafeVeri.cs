@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KafeTekno.DATA
 {
-    internal class KafeVeri
+    public class KafeVeri
     {
         public int MasaAdet { get; set; } = 20;
         public List<Urun> Urunler { get; set; } = new List<Urun>();

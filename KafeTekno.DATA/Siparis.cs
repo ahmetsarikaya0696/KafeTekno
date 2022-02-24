@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KafeTekno.DATA
 {
-    internal class Siparis
+    public class Siparis
     {
         public int MasaNo { get; set; }
         public SiparisDurum Durum { get; set; }

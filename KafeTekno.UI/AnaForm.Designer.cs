@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.lvwMasalar = new System.Windows.Forms.ListView();
             this.tsmiUrunler = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGecmisSiparisler = new System.Windows.Forms.ToolStripMenuItem();
+            this.lvwMasalar = new System.Windows.Forms.ListView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,19 +42,9 @@
             this.tsmiGecmisSiparisler});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(520, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(561, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // lvwMasalar
-            // 
-            this.lvwMasalar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvwMasalar.HideSelection = false;
-            this.lvwMasalar.Location = new System.Drawing.Point(0, 25);
-            this.lvwMasalar.Name = "lvwMasalar";
-            this.lvwMasalar.Size = new System.Drawing.Size(520, 302);
-            this.lvwMasalar.TabIndex = 1;
-            this.lvwMasalar.UseCompatibleStateImageBehavior = false;
             // 
             // tsmiUrunler
             // 
@@ -67,12 +57,24 @@
             this.tsmiGecmisSiparisler.Name = "tsmiGecmisSiparisler";
             this.tsmiGecmisSiparisler.Size = new System.Drawing.Size(120, 21);
             this.tsmiGecmisSiparisler.Text = "Geçmiş Siparişler";
+            this.tsmiGecmisSiparisler.Click += new System.EventHandler(this.tsmiGecmisSiparisler_Click);
+            // 
+            // lvwMasalar
+            // 
+            this.lvwMasalar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvwMasalar.HideSelection = false;
+            this.lvwMasalar.Location = new System.Drawing.Point(0, 25);
+            this.lvwMasalar.Name = "lvwMasalar";
+            this.lvwMasalar.Size = new System.Drawing.Size(561, 436);
+            this.lvwMasalar.TabIndex = 1;
+            this.lvwMasalar.UseCompatibleStateImageBehavior = false;
+            this.lvwMasalar.DoubleClick += new System.EventHandler(this.lvwMasalar_DoubleClick);
             // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 327);
+            this.ClientSize = new System.Drawing.Size(561, 461);
             this.Controls.Add(this.lvwMasalar);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
