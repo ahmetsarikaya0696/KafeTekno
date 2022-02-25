@@ -9,18 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KafeTekno.DATA;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace KafeTekno.UI
 {
     public partial class AnaForm : Form
     {
-        KafeVeri db = new DATA.KafeVeri();
+        KafeVeri db;
         public AnaForm()
         {
+            VerileriOku();
             InitializeComponent();
-            OrnekUrunleriYuke();
+            //OrnekUrunleriYuke();
             MasalariOlustur();
-            #region MyRegion
+            #region EskiKod
             //ImageList il = new ImageList();
             //il.ImageSize = new Size(64, 64);
             //il.Images.Add("bos", Resources.bos);
@@ -30,6 +33,7 @@ namespace KafeTekno.UI
             //lvwMasalar.Items.Add(new ListViewItem(new[] { "01", "Adana", "Akdeniz" }, "bos")); 
             #endregion
         }
+
 
         private void OrnekUrunleriYuke()
         {
@@ -43,7 +47,7 @@ namespace KafeTekno.UI
             for (int i = 1; i <= db.MasaAdet; i++)
             {
                 ListViewItem lvi = new ListViewItem("Masa " + i);
-                lvi.ImageKey = "bos";
+                lvi.ImageKey = db.AktifSiparisler.Any(x => x.MasaNo == i) ? "dolu" : "bos";
                 lvi.Tag = i;
                 lvwMasalar.Items.Add(lvi);
             }
@@ -68,7 +72,6 @@ namespace KafeTekno.UI
             sf.MasaTasindi += Sf_MasaTasindi;
             sf.ShowDialog();
             lvi.ImageKey = "dolu";
-            new SiparisForm(db, siparis).ShowDialog(); // dialog kapanana kadar bekler
 
             if (siparis.Durum != SiparisDurum.Aktif)
                 lvi.ImageKey = "bos";
@@ -116,6 +119,29 @@ namespace KafeTekno.UI
         private void tsmiUrunler_Click(object sender, EventArgs e)
         {
             new UrunlerForm(db).ShowDialog();
+        }
+        private void VerileriOku()
+        {
+            try
+            {
+                string fromJson = File.ReadAllText("veriler.json");
+                db = JsonConvert.DeserializeObject<KafeVeri>(fromJson);
+            }
+            catch (Exception)
+            {
+                db = new KafeVeri();
+                OrnekUrunleriYuke();
+            }
+        }
+        private void VerileriKaydet()
+        {
+            string toJson = JsonConvert.SerializeObject(db);
+            File.WriteAllText("veriler.json", toJson);
+        }
+
+        private void AnaForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            VerileriKaydet();
         }
     }
 }
