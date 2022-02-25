@@ -58,6 +58,7 @@
     <Compile Include="GecmisSiparislerForm.Designer.cs">
       <DependentUpon>GecmisSiparislerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MasaTasindiEventArgs.cs" />
     <Compile Include="SiparisForm.cs">
       <SubType>Form</SubType>
     </Compile>
