@@ -126,6 +126,7 @@
             this.ClientSize = new System.Drawing.Size(536, 365);
             this.Controls.Add(this.splitContainer1);
             this.Name = "GecmisSiparislerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Geçmiş Siparişler";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();

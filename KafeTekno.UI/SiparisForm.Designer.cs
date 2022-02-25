@@ -254,6 +254,7 @@
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(505, 422);
             this.Name = "SiparisForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Sipariş";
             ((System.ComponentModel.ISupportInitialize)(this.dgvSiparisDetaylar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAdet)).EndInit();
